@@ -23,6 +23,16 @@ function playSound(file)
 }
 
 
+function playChord(num)
+{
+	var audio = new Audio(sounds[num]);
+	var audio2 = new Audio(sounds[(num+4)%sounds.length]);
+	var audio3 = new Audio(sounds[(num+7)%sounds.length]);
+	audio.play();
+	audio2.play();
+	audio3.play();
+}
+
 function playRandom()
 {
   var audio = new Audio(sounds[random]);
